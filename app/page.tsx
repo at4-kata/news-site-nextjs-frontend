@@ -43,6 +43,7 @@ const data: { contents: News[] } = {
 
 export default function Home() {
   const name: string = "world";
+  const sliceData = data.contents.slice(0, 2);
   return (
     <>
       <section className={styles.top}>
@@ -63,7 +64,7 @@ export default function Home() {
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
         <ul>
-          {data.contents.map((article) => (
+          {sliceData.map((article) => (
             <li key={article.id} className={styles.list}>
               <div className={styles.link}>
                 <Image
